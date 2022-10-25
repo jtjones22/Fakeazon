@@ -1,0 +1,14 @@
+User Model
+    -is employeed
+    -is customer (default=True)
+
+Company Model
+    -Will contain Employees and Products
+    -Company will be a one to many relationship with employees
+    -Create Company Form
+    -Create Product Form
+
+Customer Model
+    -has cart
+    -has past purchases
+    -has wishlist

@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="Submit" value="Create Company">
+        <input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+
+    </form>
+</div>
+
+
+
+{% endblock %}

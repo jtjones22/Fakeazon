@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<h1>{{company.company_name}}</h1>
+
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Update Company">
+        <input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+    </form>
+</div>
+
+
+
+{% endblock %}

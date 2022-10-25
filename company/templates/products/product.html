@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>{{product.product_name}}</h1>
+<h3>${{product.product_price}}</h3>
+<h5>{{product.product_description}}</h5>
+
+<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+
+
+{% endblock %}

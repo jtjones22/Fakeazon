@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+        <h1>Company Page</h1>
+        <h2>{{company.company_name}}</h2>
+        <h2>Owner - {{company.owner.full_name}}</h2>
+        <h4>{{company.company_description}}</h4>
+        {% if user == company.owner %}
+        <h4>
+            <a href="{% url 'update company' company.pk %}">Update Company</a>
+            -
+            <a href="{% url 'create product' %}">Create Product</a>
+        </h4>
+        {% endif %}
+        <hr>
+        <h2 align="center">Products</h2>
+        {% for product in products %}
+        <h3>
+            <a href="{% url 'product' product.id%}">{{product.product_name}}</a>
+            - 
+            ${{product.product_price}}
+            {% if user == company.owner %}
+            -
+            <a href="{% url 'update product' product.pk %}">Update</a>
+            {% endif %}
+        </h3>
+
+        {% endfor %}
+</div>
+
+{% endblock %}
